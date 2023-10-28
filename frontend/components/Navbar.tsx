@@ -4,10 +4,12 @@ import Image from "next/image";
 import LOGO from "@/public/media/logowhite.png";
 import styles from "../styles/NavbarFooter.module.css";
 import LanguageIcon from "@mui/icons-material/Language";
-import UseLanguage from "../hooks/useLanguage";
+import { useLanguage } from "../hooks/useLanguage";
+import { useContext } from "react";
+import { LanguageContext } from "@/store/LanguageContext";
 
 export default function Navbar() {
-  const { language, handleLanguageChange, pageData } = UseLanguage();
+  const context = useContext(LanguageContext);
 
   return (
     <nav className={styles.nav}>
@@ -18,19 +20,14 @@ export default function Navbar() {
       />
 
       <div className={styles.navLinks}>
-        {pageData.navigationOptions.map((each) => (
+        {context.navigationOptions.map((each) => (
           <Link key={each.path} href={each.path}>
             {each.text}
           </Link>
         ))}
-        <div
-          onClick={() =>
-            handleLanguageChange(language == "english" ? "mandarin" : "english")
-          }
-          className={styles.languageIcon}
-        >
+        <div className={styles.languageIcon}>
           <LanguageIcon />
-          <p className={styles.languageText}>{language.toUpperCase()}</p>
+          {/* <p className={styles.languageText}>{language.toUpperCase()}</p> */}
         </div>
       </div>
     </nav>

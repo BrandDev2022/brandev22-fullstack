@@ -12,6 +12,27 @@ const data = {
       "We approach our work with a profound sense of responsibility, recognizing that the digital ecosystem is a dynamic space that requires constant evolution. Through our collaborative spirit, we establish enduring partnerships with our clients, underpinned by mutual trust and shared victories. It is within these partnerships that our mission thrives, where dreams are nurtured and where technology is harnessed to drive growth.",
       "In every corner of the codebase, in every pixel of design, we are shaping the digital landscape. We view technology not just as tools, but as brushes that paint the future and architects that construct tomorrow. As we propel businesses forward in this ever-evolving technological realm, we do so with reverence for the past, an acute awareness of the present, and an unyielding vision for the future.",
     ],
+    Pages: {
+      Staff: {
+        Name: "Staff",
+        Employees: [
+          {
+            firstName: "Albert",
+            lastName: "Brannan",
+            title: "Developer",
+            summary:
+              "I am a passionate developer with marketing expertise to compliment it. I am excited to help all those in need",
+          },
+          {
+            firstName: "Rui",
+            lastName: "Brannan",
+            title: "Instructional Designer/Educator",
+            summary:
+              "I am passionate when it comes to education and I use these tools to grow in my newest endeavor Instructional Design!",
+          },
+        ],
+      },
+    },
   },
   mandarin: {
     navigationOptions: [
@@ -26,6 +47,27 @@ const data = {
       "我们怀着深切的责任感对待我们的工作，认识到数字生态系统是一个需要不断发展的动态空间。通过我们的合作精神，我们与客户建立持久的合作关系，基于相互信任和共同的胜利。正是在这些伙伴关系中，我们的使命得以蓬勃发展，在这里梦想得以培育，技术得以推动增长。",
       "在代码库的每一个角落，在每一个设计的像素中，我们正在塑造数字景观。我们不仅仅看待技术作为工具，还看待它们是绘制未来的画笔和构建明天的建筑师。当我们在这个不断发展的技术领域中推动企业前进时，我们怀着对过去的尊重、对现在的敏锐意识和对未来的坚定愿景。",
     ],
+    Pages: {
+      Staff: {
+        Name: "员工",
+        Employees: [
+          {
+            firstName: "阿尔伯特",
+            lastName: "布兰南",
+            title: "开发人员",
+            summary:
+              "我是一位充满激情的开发人员，拥有营销专业知识以补充它。我很高兴帮助所有有需要的人。",
+          },
+          {
+            firstName: "瑞",
+            lastName: "布兰南",
+            title: "教育设计师/教育家",
+            summary:
+              "我在教育方面充满激情，我使用这些工具来在我的最新事业-教育设计中成长！",
+          },
+        ],
+      },
+    },
   },
 };
 
