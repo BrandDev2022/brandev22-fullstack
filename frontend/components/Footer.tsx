@@ -62,7 +62,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <Image className={styles.brandLogo} src={whiteLogo} alt="" />
+        <Image width={200} src={whiteLogo} alt="" />
       </div>
     </footer>
   );

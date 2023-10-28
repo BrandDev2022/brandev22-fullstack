@@ -12,7 +12,6 @@ export default function Navbar() {
     <nav className={styles.nav}>
       <Image
         style={{ width: 200, height: 120 }}
-        className={styles.brandLogo}
         src={LOGO}
         alt="brandev22 logo"
       />
@@ -30,12 +29,4 @@ export default function Navbar() {
       </div>
     </nav>
   );
-}
-
-{
-  /* <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
-          <Link href="/projects">Projects</Link>
-          <Link href="/contact">Contact</Link>
-          <Link href="/login">Login</Link> */
 }
