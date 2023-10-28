@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from "react";
-
 const data = {
   english: {
     navigationOptions: [
       { path: "/", text: "Home" },
-      { path: "/about", text: "About" },
+      { path: "/staff", text: "Staff" },
     ],
     missionStatement: [
       "At BRANDEV22 LLC, our unwavering mission is to revolutionize the digital landscape through pioneering web development practices. We stand as the vanguard of innovation, propelling businesses into a future where the intersection of design and functionality yields extraordinary digital experiences.",
@@ -18,7 +16,7 @@ const data = {
   mandarin: {
     navigationOptions: [
       { path: "/", text: "家" },
-      { path: "/about", text: "关于" },
+      { path: "/staff", text: "员工" },
     ],
     missionStatement: [
       "在BRANDEV22有限责任公司，我们坚定不移地使命是通过开创性的网络开发实践来改革数字景观。我们站在创新的前沿，将企业推向一个设计与功能交汇的未来，创造出非凡的数字体验。",
@@ -31,25 +29,4 @@ const data = {
   },
 };
 
-type LanguageType = "english" | "mandarin";
-interface NavOption {
-  path: string;
-  text: string;
-}
-interface PageData {
-  navigationOptions: NavOption[];
-  missionStatement: string[];
-}
-
-const UseLanguage = () => {
-  const [language, setLanguage] = useState<LanguageType>("english");
-  const [pageData, setPageData] = useState<PageData>(data[language]);
-
-  const handleLanguageChange = (newLanguage: LanguageType) => {
-    setLanguage(newLanguage);
-  };
-
-  return { language, pageData, setLanguage, handleLanguageChange };
-};
-
-export default UseLanguage;
+export default data;

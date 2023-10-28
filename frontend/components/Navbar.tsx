@@ -4,9 +4,10 @@ import Image from "next/image";
 import LOGO from "@/public/media/logowhite.png";
 import styles from "../styles/NavbarFooter.module.css";
 import LanguageIcon from "@mui/icons-material/Language";
-import UseLanguage from "@/static_data/data";
+import UseLanguage from "../hooks/useLanguage";
+
 export default function Navbar() {
-  const { language, pageData } = UseLanguage();
+  const { language, handleLanguageChange, pageData } = UseLanguage();
 
   return (
     <nav className={styles.nav}>
@@ -22,7 +23,12 @@ export default function Navbar() {
             {each.text}
           </Link>
         ))}
-        <div className={styles.languageIcon}>
+        <div
+          onClick={() =>
+            handleLanguageChange(language == "english" ? "mandarin" : "english")
+          }
+          className={styles.languageIcon}
+        >
           <LanguageIcon />
           <p className={styles.languageText}>{language.toUpperCase()}</p>
         </div>
