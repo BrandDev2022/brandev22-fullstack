@@ -38,10 +38,11 @@ interface NavOption {
 }
 interface PageData {
   navigationOptions: NavOption[];
+  missionStatement: string[];
 }
 
 const UseLanguage = () => {
-  const [language, setLanguage] = useState<LanguageType>("english");
+  const [language, setLanguage] = useState<LanguageType>("mandarin");
   const [pageData, setPageData] = useState<PageData>(data[language]);
 
   const handleLanguageChange = (newLanguage: LanguageType) => {

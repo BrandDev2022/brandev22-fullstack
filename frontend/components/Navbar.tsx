@@ -10,9 +10,24 @@ export default function Navbar() {
 
   return (
     <nav className={styles.nav}>
-      <Image className={styles.brandLogo} src={LOGO} alt="brandev22 logo" />
+      <Image
+        style={{ width: 200, height: 120 }}
+        className={styles.brandLogo}
+        src={LOGO}
+        alt="brandev22 logo"
+      />
 
-      <div className={styles.navLinks}></div>
+      <div className={styles.navLinks}>
+        {pageData.navigationOptions.map((each) => (
+          <Link key={each.path} href={each.path}>
+            {each.text}
+          </Link>
+        ))}
+        <div className={styles.languageIcon}>
+          <LanguageIcon />
+          <p className={styles.languageText}>{language.toUpperCase()}</p>
+        </div>
+      </div>
     </nav>
   );
 }
