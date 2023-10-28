@@ -1,0 +1,57 @@
+.navLinks {
+  width: 35%;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1em;
+}
+
+.nav {
+  background-color: #28282b;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1%;
+  height: 12vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  border-bottom: 1px solid grey;
+}
+
+/*-----------------------------------------------------------------*/
+
+/*Footer*/
+
+.footer {
+  height: 10rem;
+  background-color: #28282b;
+  color: white;
+  width: 100%;
+  padding: 2%;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid grey;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.locationInfo {
+  padding-left: 10%;
+  font-size: 0.8em;
+  width: 100%;
+}
+
+.socialMediaIcons {
+  display: flex;
+}
+
+.brandLogo {
+  width: 10rem;
+  height: 2rem;
+}
