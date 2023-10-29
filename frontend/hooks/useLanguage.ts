@@ -1,28 +1,26 @@
 import React, { useState, useEffect } from "react";
 import data from "../store/data";
 
-type LanguageType = "english" | "mandarin";
+export type LanguageType = "english" | "mandarin";
 
-interface NavOption {
+export interface NavOption {
   path: string;
   text: string;
 }
 export interface PageData {
   navigationOptions: NavOption[];
   missionStatement: string[];
+  Pages: {};
 }
 
 export const useLanguage = () => {
-  const [language, setLanguage] = useState<LanguageType>("english");
+  const [language, setLanguage] = useState<LanguageType>("mandarin");
   const [pageData, setPageData] = useState<PageData>(data[language]);
-
-  useEffect(() => {
-    setPageData(data[language]);
-  }, [language]);
 
   const handleLanguageChange = (newLanguage: LanguageType) => {
     setLanguage(newLanguage);
+    setPageData(data[language]);
   };
 
-  return { language, pageData, setLanguage, handleLanguageChange };
+  return { language, handleLanguageChange };
 };

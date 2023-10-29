@@ -1,6 +1,10 @@
 import React, { createContext } from "react";
 import data from "./data";
+import { LanguageType, PageData } from "@/hooks/useLanguage";
 
-import { PageData, useLanguage } from "@/hooks/useLanguage";
-
-export const LanguageContext = createContext(data["english"]);
+interface InitialState {
+  language: LanguageType;
+  pageData: PageData;
+}
+const language = "english";
+export const LanguageContext = createContext({ language });

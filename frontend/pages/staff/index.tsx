@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "@/store/LanguageContext";
 const StaffPage = () => {
-  const { Pages } = useContext(LanguageContext);
-
+  // const context = useContext(LanguageContext);
+  // const { Staff } = context.pageData.Pages;
+  // console.log(Staff);
   return (
     <div
       style={{
@@ -13,15 +14,15 @@ const StaffPage = () => {
         flexDirection: "column",
       }}
     >
-      <h2>{Pages["Staff"].Name}</h2>
-      {Pages["Staff"].Employees.map((each) => (
+      {/* <h2>{context.pageData.Pages.Staff.Name}</h2> */}
+      {/* {Pages["Staff"].Employees.map((each) => (
         <div key={each.lastName}>
           <p style={{ textDecoration: "underline" }}>
             {each.firstName} {each.lastName}: {each.title}
           </p>
           <p>{each.summary}</p>
         </div>
-      ))}
+      ))} */}
     </div>
   );
 };

@@ -20,14 +20,16 @@ export default function Navbar() {
       />
 
       <div className={styles.navLinks}>
-        {context.navigationOptions.map((each) => (
+        {/* {context.pageData.navigationOptions.map((each) => (
           <Link key={each.path} href={each.path}>
             {each.text}
           </Link>
-        ))}
+        ))} */}
         <div className={styles.languageIcon}>
           <LanguageIcon />
-          {/* <p className={styles.languageText}>{language.toUpperCase()}</p> */}
+          <p className={styles.languageText}>
+            {/* {context.language.toUpperCase()} */}
+          </p>
         </div>
       </div>
     </nav>
