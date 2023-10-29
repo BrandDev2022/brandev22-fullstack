@@ -1,3 +1,4 @@
+import styles from "../../styles/Staff.module.css";
 import React, { useContext } from "react";
 import { LanguageContext } from "../_app";
 
@@ -13,16 +14,10 @@ const StaffPage = () => {
   const StaffPage = context.pageData.Pages[0];
 
   return (
-    <div
-      style={{
-        marginTop: "10%",
-        height: "90vh",
-        display: "flex",
-        justifyContent: "space-around",
-        flexDirection: "column",
-      }}
-    >
-      <h2>{StaffPage.PageTitle}</h2>
+    <div className={styles.Page}>
+      <div className={styles.header}>
+        <h2>{StaffPage.PageTitle}</h2>
+      </div>
       {StaffPage?.Employees.map((each, idx) => (
         <div key={idx}>
           <p style={{ textDecoration: "underline" }}>

@@ -36,7 +36,7 @@ export const LanguageContext = createContext<InitialState>({
 });
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [language, setLanguage] = useState<LanguageType>("mandarin");
+  const [language, setLanguage] = useState<LanguageType>("english");
   const [pageData, setPageData] = useState<PageData>(data[language]);
 
   const handleLanguageChange = (newLanguage: LanguageType) => {
