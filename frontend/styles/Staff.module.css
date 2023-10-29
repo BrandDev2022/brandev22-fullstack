@@ -1,8 +1,26 @@
 .Page {
   height: 90vh;
   margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header {
-  border: 1px solid red;
+  text-align: center;
+}
+.staffCard {
+  width: 50%;
+  margin: 3% 0 0 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.staffCard .staffContent {
+  margin: 2%;
+  width: 50%;
+}
+
+.staffContent h2 {
+  margin-bottom: 2%;
 }
