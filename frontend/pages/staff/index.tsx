@@ -1,9 +1,17 @@
 import React, { useContext } from "react";
+import { LanguageContext } from "../_app";
+
+export interface Employee {
+  firstName: string;
+  lastName: string;
+  summary: string;
+  title: string;
+}
 
 const StaffPage = () => {
-  // const context = useContext(LanguageContext);
-  // const { Staff } = context.pageData.Pages;
-  // console.log(Staff);
+  const context = useContext(LanguageContext);
+  const StaffPage = context.pageData.Pages[0];
+  console.log(StaffPage.Employees);
   return (
     <div
       style={{
@@ -14,15 +22,15 @@ const StaffPage = () => {
         flexDirection: "column",
       }}
     >
-      {/* <h2>{context.pageData.Pages.Staff.Name}</h2> */}
-      {/* {Pages["Staff"].Employees.map((each) => (
-        <div key={each.lastName}>
+      <h2>{StaffPage.PageTitle}</h2>
+      {StaffPage?.Employees.map((each, idx) => (
+        <div key={idx}>
           <p style={{ textDecoration: "underline" }}>
             {each.firstName} {each.lastName}: {each.title}
           </p>
           <p>{each.summary}</p>
         </div>
-      ))} */}
+      ))}
     </div>
   );
 };

@@ -4,17 +4,23 @@ import type { AppProps } from "next/app";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import data from "@/pages/data";
-
+import { Employee } from "./staff";
 export type LanguageType = "english" | "mandarin";
 
 export interface NavOption {
   path: string;
   text: string;
 }
+
+interface Page {
+  PageTitle: String;
+  Employees: Employee[];
+}
+
 export interface PageData {
   navigationOptions: NavOption[];
   missionStatement: string[];
-  Pages: {};
+  Pages: Page[];
 }
 
 interface InitialState {
