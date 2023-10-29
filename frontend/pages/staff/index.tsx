@@ -11,7 +11,7 @@ export interface Employee {
 const StaffPage = () => {
   const context = useContext(LanguageContext);
   const StaffPage = context.pageData.Pages[0];
-  console.log(StaffPage.Employees);
+
   return (
     <div
       style={{
