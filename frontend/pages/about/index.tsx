@@ -25,14 +25,14 @@ const StaffPage = () => {
       {StaffPage?.Employees.map((each, idx) => (
         <div className={styles.staffCard} key={idx}>
           <Image
-            style={{ borderRadius: "500px" }}
+            className={styles.staffPhoto}
             src={each.picture}
             alt="person"
             width={250}
             height={300}
           />
           <div className={styles.staffContent}>
-            <h2 style={{ textDecoration: "underline" }}>
+            <h2>
               {each.firstName} {each.lastName}
             </h2>
             <h3>{each.title}</h3>

@@ -4,7 +4,7 @@ import type { AppProps } from "next/app";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import data from "@/pages/data";
-import { Employee } from "./staff";
+import { Employee } from "./about";
 export type LanguageType = "english" | "mandarin";
 
 export interface NavOption {

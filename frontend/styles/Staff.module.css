@@ -19,10 +19,19 @@
 }
 
 .staffCard .staffContent {
-  margin: 2%;
+  margin-left: 5%;
   width: 50%;
 }
 
 .staffContent h2 {
   margin-bottom: 2%;
+}
+
+.staffContent h2:hover {
+  text-decoration: underline;
+}
+
+.staffPhoto {
+  box-shadow: 5px 5px 5px black;
+  border-radius: 10px;
 }
