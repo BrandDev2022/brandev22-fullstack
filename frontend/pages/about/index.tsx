@@ -33,7 +33,9 @@ const StaffPage = () => {
           />
           <div className={styles.staffContent}>
             <h2>
-              {each.firstName} {each.lastName}
+              <a href={`/${each.firstName.toLowerCase()}`}>
+                {each.firstName} {each.lastName}
+              </a>
             </h2>
             <h3>{each.title}</h3>
             <p>{each.summary}</p>
