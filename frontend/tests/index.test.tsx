@@ -1,5 +1,3 @@
-import data from "../pages/data";
-
 describe("Sanity Tests", () => {
   test("3 + 3 Should equal 6", () => {
     expect(3 + 3).toEqual(6);

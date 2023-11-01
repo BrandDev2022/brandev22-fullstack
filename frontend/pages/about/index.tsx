@@ -1,8 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import styles from "../../styles/Staff.module.css";
-import AlbertPic from "../../public/media/AlbertPic.png";
 import React, { useContext } from "react";
-
 import Albert from "../../public/media/AlbertPic.png";
 import Rui from "../../public/media/ruigradphoto.png";
 import { LanguageContext, LanguageType } from "../_app";
