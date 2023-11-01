@@ -6,9 +6,41 @@ import LOGO from "@/public/media/logowhite.png";
 import styles from "../styles/NavbarFooter.module.css";
 import LanguageIcon from "@mui/icons-material/Language";
 import { LanguageContext } from "@/pages/_app";
+import { LanguageType } from "@/pages/_app";
+
+interface NavOption {
+  path: string;
+  text: string;
+}
+
+interface LanguageProperties {
+  options: NavOption[];
+  label: LanguageType;
+}
+
+type Navigation = {
+  [key in LanguageType]: LanguageProperties;
+};
+
+const navigation: Navigation = {
+  english: {
+    options: [
+      { path: "/", text: "Home" },
+      { path: "/about", text: "About" },
+    ],
+    label: "english",
+  },
+  mandarin: {
+    options: [
+      { path: "/", text: "家" },
+      { path: "/about", text: "关于" },
+    ],
+    label: "mandarin",
+  },
+};
+
 export default function Navbar() {
-  const { pageData, language, handleLanguageChange } =
-    useContext(LanguageContext);
+  const { language, handleLanguageChange } = useContext(LanguageContext);
   const toggleLanguage = () => {
     if (language !== "english") {
       handleLanguageChange("english");
@@ -26,7 +58,7 @@ export default function Navbar() {
       />
 
       <div className={styles.navLinks}>
-        {pageData.navigationOptions.map((each) => (
+        {navigation[language].options.map((each) => (
           <Link key={each.path} href={each.path}>
             {each.text}
           </Link>

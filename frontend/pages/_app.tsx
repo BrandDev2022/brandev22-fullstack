@@ -5,12 +5,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import data from "@/pages/data";
 import { Employee } from "./about";
-export type LanguageType = "english" | "mandarin";
 
-export interface NavOption {
-  path: string;
-  text: string;
-}
+export type LanguageType = "english" | "mandarin";
 
 interface Page {
   PageTitle: String;
@@ -18,7 +14,6 @@ interface Page {
 }
 
 export interface PageData {
-  navigationOptions: NavOption[];
   missionStatement: string[];
   Pages: Page[];
 }

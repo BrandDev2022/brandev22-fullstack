@@ -3,10 +3,6 @@ import Rui from "../public/media/ruigradphoto.png";
 
 const data = {
   english: {
-    navigationOptions: [
-      { path: "/", text: "Home" },
-      { path: "/about", text: "About" },
-    ],
     missionStatement: [
       "At BRANDEV22 LLC, our unwavering mission is to revolutionize the digital landscape through pioneering web development practices. We stand as the vanguard of innovation, propelling businesses into a future where the intersection of design and functionality yields extraordinary digital experiences.",
       "We hold steadfast to the belief that the digital realm is not just a canvas but an immersive environment where businesses can thrive and connect with their audiences on profound levels. Our purpose is to empower enterprises with cutting-edge solutions that transcend the ordinary, seamlessly merging artistry and technology to craft captivating web experiences that resonate deeply.",
@@ -40,10 +36,6 @@ const data = {
     ],
   },
   mandarin: {
-    navigationOptions: [
-      { path: "/", text: "家" },
-      { path: "/about", text: "关于" },
-    ],
     missionStatement: [
       "在BRANDEV22有限责任公司，我们坚定不移地使命是通过开创性的网络开发实践来改革数字景观。我们站在创新的前沿，将企业推向一个设计与功能交汇的未来，创造出非凡的数字体验。",
       "我们坚信数字领域不仅仅是一块画布，更是一个沉浸式环境，企业可以在深层次上茁壮成长并与他们的受众建立联系。我们的目标是为企业提供尖端解决方案，超越寻常，无缝地融合艺术和技术，打造引人入胜的网络体验。",
