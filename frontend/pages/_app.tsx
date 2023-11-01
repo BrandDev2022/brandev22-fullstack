@@ -8,38 +8,24 @@ import { Employee } from "./about";
 
 export type LanguageType = "english" | "mandarin";
 
-interface Page {
-  PageTitle: String;
-  Employees: Employee[];
-}
-
-export interface PageData {
-  Pages: Page[];
-}
-
 interface InitialState {
   language: LanguageType;
-  pageData: PageData;
   handleLanguageChange(newLanguage: LanguageType): void;
 }
 
 export const LanguageContext = createContext<InitialState>({
   language: "english",
-  pageData: data["english"],
   handleLanguageChange: (newLanguage) => {},
 });
 
 export default function App({ Component, pageProps }: AppProps) {
   const [language, setLanguage] = useState<LanguageType>("english");
-  const [pageData, setPageData] = useState<PageData>(data[language]);
 
   const handleLanguageChange = (newLanguage: LanguageType) => {
     setLanguage(newLanguage);
-    setPageData(data[newLanguage]);
   };
   const initContext = {
     language,
-    pageData,
     handleLanguageChange,
   };
   return (
