@@ -14,7 +14,6 @@ interface Page {
 }
 
 export interface PageData {
-  missionStatement: string[];
   Pages: Page[];
 }
 
