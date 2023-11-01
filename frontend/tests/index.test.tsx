@@ -14,10 +14,10 @@ describe("Sanity Tests", () => {
   });
 });
 
-describe("Test Navigation Options", () => {
-  const navEnglish = data["english"]["navigationOptions"];
+// describe("Test Navigation Options", () => {
+//   const navEnglish = data["english"]["navigationOptions"];
 
-  //   expect(navEnglish.length).toBe(2);
+//   //   expect(navEnglish.length).toBe(2);
 
-  //   expect(navEnglish[0]).toBe({ path: "/", text: "Home" });
-});
+//   //   expect(navEnglish[0]).toBe({ path: "/", text: "Home" });
+// });
