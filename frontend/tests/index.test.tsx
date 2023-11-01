@@ -1,3 +1,6 @@
+import React, { useContext } from "react";
+import { render, screen } from "@testing-library/react";
+
 describe("Sanity Tests", () => {
   test("3 + 3 Should equal 6", () => {
     expect(3 + 3).toEqual(6);
@@ -12,10 +15,11 @@ describe("Sanity Tests", () => {
   });
 });
 
-// describe("Test Navigation Options", () => {
-//   const navEnglish = data["english"]["navigationOptions"];
+describe("Test Navigation Options", () => {
+  test("Test English Navigation", () => {
+    // const HomeTab = screen.getByText(/home/);
+    // expect(HomeTab).toBeInTheDocument();
+  });
 
-//   //   expect(navEnglish.length).toBe(2);
-
-//   //   expect(navEnglish[0]).toBe({ path: "/", text: "Home" });
-// });
+  test("Test Manderin Navigation", () => {});
+});

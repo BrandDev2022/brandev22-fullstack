@@ -3,7 +3,6 @@ import React, { useState, createContext } from "react";
 import type { AppProps } from "next/app";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Employee } from "./about";
 
 export type LanguageType = "english" | "mandarin";
 
@@ -14,7 +13,7 @@ interface InitialState {
 
 export const LanguageContext = createContext<InitialState>({
   language: "english",
-  handleLanguageChange: (newLanguage) => {},
+  handleLanguageChange: (newLanguage: LanguageType) => {},
 });
 
 export default function App({ Component, pageProps }: AppProps) {

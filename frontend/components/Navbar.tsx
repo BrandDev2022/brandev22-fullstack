@@ -22,7 +22,7 @@ type Navigation = {
   [key in LanguageType]: LanguageProperties;
 };
 
-const navigation: Navigation = {
+export const navigation: Navigation = {
   english: {
     options: [
       { path: "/", text: "Home" },
