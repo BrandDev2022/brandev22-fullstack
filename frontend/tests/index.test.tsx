@@ -15,11 +15,10 @@ describe("Sanity Tests", () => {
   });
 });
 
-describe("Test Navigation Options", () => {
-  test("Test English Navigation", () => {
-    // const HomeTab = screen.getByText(/home/);
-    // expect(HomeTab).toBeInTheDocument();
-  });
-
-  test("Test Manderin Navigation", () => {});
-});
+// describe("Test Navigation Options", () => {
+//   // test("Test English Navigation", () => {
+//   //   // const HomeTab = screen.getByText(/home/);
+//   //   // expect(HomeTab).toBeInTheDocument();
+//   // });
+//   // test("Test Manderin Navigation", () => {});
+// });
