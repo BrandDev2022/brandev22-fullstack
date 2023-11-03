@@ -13,12 +13,8 @@ describe("Sanity Tests", () => {
   test("true should not equal false", () => {
     expect(true).not.toBe(false);
   });
-});
 
-// describe("Test Navigation Options", () => {
-//   // test("Test English Navigation", () => {
-//   //   // const HomeTab = screen.getByText(/home/);
-//   //   // expect(HomeTab).toBeInTheDocument();
-//   // });
-//   // test("Test Manderin Navigation", () => {});
-// });
+  test("!true should not equal true", () => {
+    expect(!true).toBe(false);
+  });
+});
