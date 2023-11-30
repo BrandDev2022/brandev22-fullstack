@@ -30,6 +30,11 @@ const missionStatement: MissionStatement = {
   ],
 };
 
+const pageTitle = {
+  english: "Mission Statement",
+  mandarin: "使命宣言",
+};
+
 export default function Home() {
   const { language } = useContext(LanguageContext);
 
@@ -37,7 +42,22 @@ export default function Home() {
     <>
       <main>
         <AboutHeader />
+
         <section className={styles.missionStatement}>
+          <div>
+            <h2
+              style={{
+                // backgroundColor: "white",
+                display: "flex",
+                justifyContent: "center",
+                color: "maroon",
+                marginTop: "2%",
+                fontSize: "3rem",
+              }}
+            >
+              {pageTitle[language]}
+            </h2>
+          </div>
           <div className={styles.missionText}>
             {missionStatement[language].map((each, idx) => (
               <p key={idx}>{each}</p>
